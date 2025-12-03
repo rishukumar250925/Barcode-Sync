@@ -1,0 +1,103 @@
+body {
+  font-family: "Inter", sans-serif;
+  -webkit-tap-highlight-color: transparent;
+}
+
+#reader {
+  width: 100%;
+  min-height: 300px;
+  border-radius: 1rem;
+  overflow: hidden;
+  background: #000;
+  position: relative;
+}
+#reader video {
+  object-fit: cover;
+  border-radius: 1rem;
+}
+#reader__scan_region {
+  background: transparent !important;
+}
+
+.scan-line {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background-color: rgba(255, 0, 0, 0.8);
+  box-shadow: 0 0 4px red;
+  z-index: 10;
+  animation: scanMove 2s infinite ease-in-out;
+  pointer-events: none;
+}
+
+.text-gradient {
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-image: linear-gradient(to right, #ef4444, #22c55e);
+}
+
+@keyframes scanMove {
+  0% {
+    transform: translateY(-50px);
+    opacity: 0.5;
+  }
+  50% {
+    transform: translateY(50px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-50px);
+    opacity: 0.5;
+  }
+}
+
+#scanOverlay {
+  pointer-events: none;
+}
+.scale-in {
+  animation: scaleIn 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+@keyframes scaleIn {
+  from {
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.scan-item {
+  transition: all 0.3s ease;
+  animation: slideIn 0.3s ease-out;
+}
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+.sidebar-panel {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.backdrop {
+  transition: opacity 0.3s ease-in-out;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
