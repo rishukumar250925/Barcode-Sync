@@ -302,7 +302,7 @@ async function startScanning() {
     html5QrCode = new Html5Qrcode("reader", { verbose: false });
     const cameraId = els.cameraSelect.value;
     const config = {
-      fps: 10,
+      fps: 40,
       qrbox: (viewfinderWidth, viewfinderHeight) => {
         const minEdge = Math.min(viewfinderWidth, viewfinderHeight);
         const width = Math.floor(minEdge * 0.9);
@@ -600,3 +600,4 @@ function renderList() {
 
 els.startBtn.addEventListener("click", startScanning);
 els.stopBtn.addEventListener("click", stopScanning);
+
