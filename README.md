@@ -48,7 +48,7 @@ It is designed for inventory management, event ticketing, and attendance trackin
 - **API Token:** Uses a secret token handshake to secure the Google Script endpoint.
 
 ### ⚡ User Experience (UX)
-- **Audio Feedback:** Custom generated sound waves (Oscillators) for Success (Triangle wave) and Error (Sawtooth wave) alerts. No external MP3 files needed.
+- **Audio Feedback:** Custom generated sound waves (Oscillators) for Success (Triangle wave) and Error (Sawtooth wave) alerts. 
 - **CSV Export:** One-click export of local session data to CSV.
 - **Mobile First:** Fully responsive UI built with Tailwind CSS.
 
@@ -65,6 +65,7 @@ It is designed for inventory management, event ticketing, and attendance trackin
 | **Hosting** | Netlify |
 | **Backend Logic** | Google Apps Script (Web App) |
 | **Database** | Google Sheets |
+| **Domain** | GoDaddy |
 
 ---
 
@@ -111,7 +112,7 @@ Click "Open Settings".
 
 Enter Name, Email, Phone -> **Click Verify.**
 
-Click the link sent to your email to unlock the device.
+Click the link sent to your email to unlock the scan button.
 
 ## Scanning:
 
